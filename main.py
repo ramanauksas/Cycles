@@ -1,3 +1,4 @@
+import random
 
 # for ciklo uzduotys
 
@@ -241,21 +242,225 @@ while True:
 #         break
 
 
-print("--- 11 uzduotis ---")
-my_sum = 0
-count = 0
-my_avg = 0
+# print("--- 11 uzduotis ---")
+# my_sum = 0
+# count = 0
+# my_avg = 0
+# while True:
+#     my_num = int(input("Iveskite skaiciu (0, -1 - sustabdys cikla): "))
+#     if my_num in [0, -1]:
+#         break
+#     my_sum += my_num
+#     count += 1
+#     my_avg = my_sum/count
+# print(f"suma: {my_sum}; vidurkis: {my_avg}")
+
+
+# print("--- 12 uzduotis ---")
+# while True:
+#     name = input("Iveskite studento varda: ")
+#     my_sum = 0
+#     count = 0
+#     my_avg = 0
+#     while True:
+#         my_num = int(input("Iveskite pazymi (0, -1 - sustabdys cikla): "))
+#         if my_num in [0, -1]:
+#             break
+#         my_sum += my_num
+#         count += 1
+#         my_avg = my_sum/count
+#     print(f"Studento ({name}) pazymiu vidurkis: {my_avg}")
+#     more = input("Skaiciuojam kitam studentui? (T/N): ")
+#     if more!="T":
+#         break
+
+# print("--- 13 uzduotis ---")
+# while True:
+#     r1 = int(input("Pasirinkite zemutini rezi"))
+#     r2 = int(input("Pasirinkite virsutini rezi"))
+#     if r2>r1:
+#         break
+#     print("Blogi reziai!")
+# while True:
+#     allow_help = input("Ar reikes pagalbos spejant? (T/N)")
+#     if allow_help.lower() in ["t", "n"]:
+#         break
+#     print("Nesupratau atsakymo!")
+# while True:
+#     max_guesses = input("Kiek leidziama spejimu? (-1 reikš neribotai)")
+#     try:
+#         max_guesses = int(max_guesses)
+#         break
+#     except:
+#         print("Iveskite skaiciu!")
+#
+# secret_num = random.randint(r1, r2)
+# current_try = 0
+# while True:
+#     current_try += 1
+#     guess = int(input(f"Spekite skaiciu nuo {r1} iki {r2}"))
+#     if allow_help:
+#         if guess > secret_num:
+#             print("Bandykite mazesni!")
+#         elif guess < secret_num:
+#             print("Bandykite didesni!")
+#         else:
+#             print("Atspejote!")
+#             break
+#     else:
+#         if guess == secret_num:
+#             print("Atspejote!")
+#             break
+#     if current_try == max_guesses:
+#         print("Isnaudojote visus bandymus. Neatspejote!")
+#         break
+
+#  Is python 11 - sarasai
+print("--- 16 uzduotis ---")
+word_list = ["mano", "sarasas", "su", "pasirinktais", "zodziais"]
+word_string_comma = ", ".join(word_list)
+word_string_vertical = "|".join(word_list)
+word_string_space = " ".join(word_list)
+print(word_string_comma)
+print(word_string_vertical)
+print(word_string_space)
+
+print("--- 17 uzduotis ---")
+language, environment, *files = ["python", "web", "myfile1", "myfile2", "myfile3"]
+print(language)
+print(environment)
+print(files)
+
+print("--- 18 uzduotis ---")
+coworkers = ["Jonas Jonaitis", "Petras Petraitis", "Jonas Kazlauskas"]
+print("Prie projekto dirba sie komandos nariai:")
+for worker in coworkers:
+    print(worker)
+
+print("-- 19 uzduotis ---")
+themes = ["variables", "strings", "conditional sentences", "for loops", "while loops"]
+print("Mes jau mokemes:")
+
+for theme in themes:
+    print(theme)
+
 while True:
-    my_num = int(input("Iveskite skaiciu (0, -1 - sustabdys cikla): "))
-    if my_num in [0, -1]:
+    try:
+        theme = themes.pop(0)
+        print(theme)
+    except:
         break
-    my_sum += my_num
-    count += 1
-    my_avg = my_sum/count
-print(f"suma: {my_sum}; vidurkis: {my_avg}")
+
+print("--- 20 uzduotis ---")
+courses = ["web development", "data analytics", "data science", "machine learning"]
+for course in courses:
+    print(course)
 
 
-print("--- 12 uzduotis ---")
+print("--- 21 uzduotis ---")
+countries = ["Lithuania", "Latvia", "Estonia", "Poland"]
+for country in countries:
+    print(f"Šalis: {country}")
+
+print("--- 22 uzduotis ---")
+cart = ["Duona", "Batonas", "Sviestas", "Ledai"]
+for i, product in enumerate(cart):
+    print(f"Pirkinys Nr. {i}: {product}")
+
+print("-- 23 uzduotis ---")
+grades = [8, 9, 10, 8, 9, 7, 6, 9, 10]
+grades.sort()
+for grade in grades:
+    if grade == 10:
+        comment = "puikiai"
+    if grade == 9:
+        comment = "labai gerai"
+    if grade == 8:
+        comment = "gerai"
+    if grade == 7:
+        comment = "pakankamai"
+    if grade == 6:
+        comment = "patenkinamai"
+    if grade == 5:
+        comment = "silpnai"
+    if grade == 4:
+        comment = "nepatenkinamai"
+    if grade == 3:
+        comment = "prastai"
+    if grade == 2:
+        comment = "labai prastai"
+    if grade == 1:
+        comment = "kosmaras"
+    if grade == 0:
+        comment = "nepaduota"
+    print(f"{grade} - {comment}")
+
+# print(" --- 24 uzduotis ---")
+# num_of_numbers = int(input("Kiek generuosim skaiciu? "))
+# num_list = []
+# for i in range(num_of_numbers):
+#     num_list.append(random.randint(0,100))
+# print(num_list)
+# for num in num_list:
+#     print(f"{num}; {num**2}")
+
+print("--- 25 uzduotis ---")
+initial_list = ["list", "with", "initial", "information"]
+print("initial list: ", initial_list)
+initial_list[0] = "sarasas"
+initial_list[2] = "pradine"
+initial_list[3] = "informacija"
+print("changed list: ", initial_list)
+
+print("--- 26 uzduotis ---")
+numbers = [1, 2, 5, 7, 9, 10, 15, 10, 14, 16, 21, 22]
+print("Lyginiai skaiciai:")
+for num in numbers:
+    if num %2 ==0:
+        print(num)
+print("Visi nelyginiai skaiciai: ")
+for num in numbers:
+    if num%2!=0:
+        print(num)
+print("Visi skaiciai, kurie dalijasi is 3: ")
+for num in numbers:
+    if num%3==0:
+        print(num)
+
+print("--- 28 uzduotis ---")
+numbers = [2, 5, 7, 9, 10, 15, 10, 14, 16, 21, 22]
+for number in numbers:
+    multipliers = []
+    for i in range(0, number+1):
+        if i!=0 and i!=1 and number%i==0:
+            multipliers.append(str(i))
+    multipliers_list = ", ".join(multipliers)
+    print(f"Skaicius {number} dalinasi is {multipliers_list}")
+
+# print("--- 29 uzduotis ---")
+# num_words = int(input("Kiek norite ivesti zodziu? "))
+# word_list = []
+# for i in range(num_words):
+#     word = input("Iveskite zodi: ")
+#     word_list.append(word)
+# print("Zodziu sarasas: ", word_list)
+
+print("--- 30 uzduotis ---")
+my_list=["my", "random", "word", "list"]
+for word in my_list:
+    print(f"word: {word}; number of letterS: {len(word)}")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
