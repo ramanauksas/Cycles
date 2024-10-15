@@ -148,4 +148,114 @@ for i in range(2, length+1):
 
 # While ciklai
 
-# --- 1 uzduotis ---
+print("--- 1 uzduotis ---")
+i=0
+while i<20:
+    i += 1
+    print(i)
+
+print("--- 2 uzduotis ---")
+i=0
+while i<50:
+    i+=1
+    if i%2==0:
+        print(f"{i} - lyginis")
+    else:
+        print(f"{i} - nelyginis")
+
+print("--- 3 uzduotis ---")
+i=24
+while i<50:
+    i +=1
+    if i%3==0:
+        print("dalinasi is 3")
+    else:
+        print(i)
+
+print("--- 4 uzduotis ---")
+i=0
+while True:
+    i += 1
+    if i%7==0:
+        break
+    print(i)
+
+print("--- 5 uzduotis ---")
+i=0
+while True:
+    i += 1
+    if i%15==0:
+        break
+    print(i)
+
+# print("--- 6 uzduotis ---")
+# while True:
+#     r1 = int(input("Iveskite zemutini rezi: "))
+#     r2 = int(input("Iveskite virsutini rezi: "))
+#     if r2>r1:
+#         break
+#     print("Blogi reziai!")
+# for i in range(r1,r2):
+#     print(f'{i} - {"lyginis" if i%2==0 else "nelyginis"}, {i**2}')
+
+print("--- 7 uzduotis ---")
+i = 0
+while True:
+    i+=1
+    print(i)
+    if i>20:
+        pirminis = True
+        for x in range(2, i):
+            if i % x == 0:
+                pirminis = False
+                break
+        if pirminis == True:
+            break
+
+# print("--- 8 uzduotis ---")
+# result = 0
+# while True:
+#     my_num = int(input("Iveskite skaiciu (Ivedus nuli skaiciuosim suma): "))
+#     result += my_num
+#     if my_num == 0:
+#         break
+# print(f"Ivestu skaiciu suma: {result}")
+
+
+# print("--- 9 uzduotis ---")
+# while True:
+#     num1 = int(input("Iveskite pirma skaiciu: "))
+#     num2 = int(input("Iveskite antra skaiciu: "))
+#     print(f"{num1}+{num2}={num1+num2}\n{num1}-{num2}={num1-num2}\n{num1}*{num2}={num1*num2}\n{num1}/{num2}={num1/num2}")
+#     more = input("Vedam dar? (T/N): ")
+#     if more!="T":
+#         break
+
+# print("--- 10 uzduotis ---")
+# while True:
+#     num1 = int(input("Iveskite skaiciu nuo 1 iki 9: "))
+#     for i in range(1,10):
+#         print(f"{num1} * {i} = {num1*i}")
+#     more = input("Kartojam? (T/N): ")
+#     if more!="T":
+#         break
+
+
+print("--- 11 uzduotis ---")
+my_sum = 0
+count = 0
+my_avg = 0
+while True:
+    my_num = int(input("Iveskite skaiciu (0, -1 - sustabdys cikla): "))
+    if my_num in [0, -1]:
+        break
+    my_sum += my_num
+    count += 1
+    my_avg = my_sum/count
+print(f"suma: {my_sum}; vidurkis: {my_avg}")
+
+
+print("--- 12 uzduotis ---")
+
+
+
