@@ -615,8 +615,201 @@ print(f"Zodziu sarasas: {word_list}")
 print(f"Trumpu zodziu sarasas: {short_word_list}")
 
 
+# 3 ciklai.
+# Lengvesni
+print("\n--- 1 ---")
+for i in range(10):
+    print("labas")
+
+print("\n--- 2 ----")
+for i in range(10):
+    print(i)
+
+print("\n--- 3 ---")
+plants = ["egle", "pusis", "azuolas", "berzas", "klevas", "obelis", "kriause", "vysnia", "slyva", "sermuksnis"]
+
+print("\n--- 4 ---")
+for plant in plants:
+    print(plant)
+
+print("\n --- 5 ---")
+plants_reverse = plants[:]
+plants_reverse.reverse()
+for plant in plants_reverse:
+    print(plant)
+
+print("\n --- 6 ---")
+for num in range(51):
+    if num%2==0:
+        print(num)
+
+print("\n --- 7 ---")
+for num in range(10,51):
+    if num%2==0:
+        if num%10==0:
+            continue
+        print(num)
+
+print("\n --- 8 ---")
+count_even = 0
+for i in range(21):
+    if i%2==0:
+        count_even += 1
+print(count_even)
+
+print("\n --- 9 ---")
+print(plants)
+print(f"Kiek zodziu, trumpesniu nei 5 raides: {sum((1 for plant in plants if len(plant)<5))}")
+print(f"Kiek zodziu, ilgesniu nei 7 raides: {sum((1 for plant in plants if len(plant)>7))}")
+
+print("\n --- 10 ---")
+print(plants)
+print(f"Kiek zodziu, turiniciu 6-9 raides: {sum((1 for plant in plants if (len(plant)>5) and len(plant)<10))}")
+
+# Sunkesni
+print("\n--- 1 ---")
+nums = [random.randint(0,300) for i in range(300)]
+string_of_nums = ""
+for num in nums:
+    text = f"[{num}]" if num>275 else str(num)
+    string_of_nums += text + " "
+print("Skaiciai: ", string_of_nums)
+count_larger_than_150 = sum((1 for num in nums if num>150))
+print(f"Kiek daugiau uz 150: {count_larger_than_150}")
+
+print("\--- 2 ---")
+nums = [i for i in range(1,3001)]
+string_of_nums = ""
+for num in nums:
+    string_of_nums += f"{num}, "
+trimmed_string = string_of_nums[:-2]
+print(trimmed_string)
+
+print("\n--- 3 ---")
+for x in range(25):
+    print("*"*25)
+
+print("\n--- 4 ---")
+for x in range(25):
+    line = ""
+    for y in range(25):
+        if y == x or y == 24 - x:
+            line += "O"
+        else:
+            line += "*"
+    print(line)
 
 
+print("\n--- 5 ---")
+# while True:
+#     coin = random.randint(0,1)
+#     print("S" if coin==1 else "H")
+#     if coin == 0:
+#         break
+
+# count_0 = 0
+# while True:
+#     coin = random.randint(0,1)
+#     print("S" if coin==1 else "H")
+#     if coin == 0:
+#         count_0 += 1
+#         if count_0 == 3:
+#             break
+
+
+count_0 = 0
+while True:
+    coin = random.randint(0,1)
+    print("S" if coin==1 else "H")
+    if coin == 0:
+        count_0 += 1
+        if count_0 == 3:
+            break
+    else:
+        count_0 = 0
+
+print("\n--- 6 ---")
+score1 = 0
+score2 = 0
+while True:
+    rand1 = random.randint(10,20)
+    rand2 = random.randint(5, 25)
+    score1 += rand1
+    score2 += rand2
+    if score1>=222 or score2>=222:
+        print(f"Galutinis rezultatas: {score1}-{score2}")
+        if score1>score2:
+            print("Laimetojas - Kazys")
+        elif score1<score2:
+            print("Laimetojas - Petras")
+        else:
+            print("Lygiosios")
+        break
+
+print("\n--- 7 ---")
+increment = 0
+for y in range(21):
+    line=""
+    for x in range(21):
+        if 10-increment<=x and x<=10+increment:
+            line += "*"
+        else:
+            line += " "
+    increment += 1 if y<10 else -1
+    print(line)
+
+print("\n--- 8 ---")
+length = 0
+num_hits = 0
+while True:
+    num_hits += 1
+    hit = random.randint(5,20)
+    length += hit
+    if length>=85:
+        break
+print(f"Viniai ikalti i lenta reikia: {num_hits} mazu smugiu")
+
+length = 0
+num_hits = 0
+while True:
+    num_hits += 1
+    hit = random.randint(20,30)
+    fail = random.randint(0,1000000) > 500000
+    length += hit if not fail else 0
+    if length>=85:
+        break
+print(f"Viniai ikalti i lenta reikia: {num_hits} dideliu smugiu")
+
+
+print("\--- 9 ---")
+rand_nums = []
+while len(rand_nums) != 200:
+    rand = random.randint(1, 201)
+    if rand not in rand_nums:
+        rand_nums.append(rand)
+
+selected_rand_nums = []
+selected_rand_nums_string = ""
+for num in range(50):
+    rand_num = rand_nums.pop()
+    selected_rand_nums.append(rand_num)
+    selected_rand_nums_string += f"{rand_num} "
+print(selected_rand_nums_string)
+
+primary_numbers = []
+for num in selected_rand_nums:
+    divisible = 0
+    for i in range(2, num):
+        if num%i==0:
+            divisible += 1
+    if divisible == 0:
+        primary_numbers.append(num)
+
+primary_numbers.sort()
+primary_numbers_string = ""
+for num in primary_numbers:
+    primary_numbers_string += f"{num} "
+print(f"Pirminiai skaiciai: {primary_numbers_string}")
 
 
 
