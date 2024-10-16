@@ -451,8 +451,168 @@ for word in my_list:
     print(f"word: {word}; number of letterS: {len(word)}")
 
 
+# print("--- 31 uzduotis ---")
+# grades = []
+# while True:
+#     grade = int(input("Iveskite pazymi (Spauskite 0, kad baigtume ivedima): "))
+#     if grade == 0:
+#         break
+#     grades.append(grade)
+#
+# print("Pazymiu vidurkis", sum(grades)/len(grades))
+# bad_grades = [grade for grade in grades if grade<=4]
+# print(f"Neigiami pazymiai: {bad_grades}\nJu kiekis: {len(bad_grades)}")
 
 
+print("--- 32 uzduotis ---")
+word_list = ["this", "is", "my", "word", "salad", "list"]
+word_with_length_list = []
+for word in word_list:
+    word_with_length_list.append([word, len(word)])
+word_with_length_list.sort(key= lambda x: x[1])
+shortest_tuple = word_with_length_list[0]
+longest_tuple = word_with_length_list[-1]
+
+print(f"Trumpiausias zodis: {shortest_tuple[0]} ({shortest_tuple[1]} raides)")
+print(f"Ilgiausias zodis: {longest_tuple[0]} ({longest_tuple[1]} raides)")
+
+print("--- 33 uzduotis ---")
+random_list = [random.randint(1, 100) for i in range(100)]
+avg_num = sum(random_list)/len(random_list)
+print(f"Maziausias skaicius: {min(random_list)}\nDidziausias skaicius: {max(random_list)}\nVidurkis: {avg_num}")
+smaller_numbers = [num for num in random_list if num<avg_num]
+print(f"Skaiciai, mazesni negu vidurkis: {smaller_numbers}")
+print(f"Siu skaiciu vidurkis: {round(sum(smaller_numbers)/len(smaller_numbers), 1)}")
+larger_numbers = [num for num in random_list if num>avg_num]
+print(f"Skaiciai, didesni negu vidurkis: {larger_numbers}")
+print(f"Siu skaiciu vidurkis: {round(sum(larger_numbers)/len(larger_numbers), 1)}")
+
+print("--- 34 uzduotis ---")
+word_list = ["cia", "turime", "mano", "atsitiktiniu", "zodziu", "masyva"]
+tuple_list = [(word, len(word)) for word in word_list]
+tuple_list.sort(key= lambda tuple: tuple[1])
+diff = tuple_list[-1][1] - tuple_list[0][1]
+print(f"Skirtumas tarp ilgiausio ir trumpiausio zodzio: {diff} raides")
+
+
+# print("--- 35 uzduotis ---")
+# grades1 = []
+# while True:
+#     grade = int(input("Iveskite pirmo studento pazymi (arba iveskite 0, jei baigete suvedineti): "))
+#     if grade == 0:
+#         break
+#     grades1.append(grade)
+# avg_grade1 = sum(grades1)/len(grades1)
+# bad_grades1 = [grade for grade in grades1 if grade<=4]
+#
+# grades2 = []
+# while True:
+#     grade = int(input("Iveskite antro studento pazymi (arba iveskite 0, jei baigete suvedineti): "))
+#     if grade == 0:
+#         break
+#     grades2.append(grade)
+# avg_grade2 = sum(grades2)/len(grades2)
+# bad_grades2 = [grade for grade in grades2 if grade<=4]
+#
+# print("")
+# if avg_grade1 > avg_grade2:
+#     print("Pirmojo studento vidurkis geresnis")
+# elif avg_grade1 < avg_grade2:
+#     print("Antrojo studento vidurkis geresnis")
+# else:
+#     print("Studentu vidurkiai vienodi")
+#
+# if sum(bad_grades1) > 0:
+#     print("Pirmas studentas turi neigiamu pazymiu")
+# if sum(bad_grades2) > 0:
+#     print("Antras studentas turi neigiamu pazymiu")
+
+
+print("--- 36 uzduotis ---")
+rand_nums = [random.randint(1,100) for i in range(20)]
+nums_divisible_by_four = [num for num in rand_nums if num%4==0]
+print(f"Skaiciai, kurie dalijasi is 4: {nums_divisible_by_four}")
+print(f"Ju suma: {sum(nums_divisible_by_four)}")
+
+
+print("--- 37 uzduotis ---")
+nums = [1, 5, 10, 7, 12, 45]
+for num in nums:
+    if num%2==0:
+        print(f"skaicius: {num}; kvadratas: {num**2}")
+    else:
+        print(f"skaicius: {num}")
+
+print("--- 38 uzduotis ---")
+grades = [5, 4, 9, 10, 2, 4, 6, 7]
+for grade in grades:
+    if grade>=5:
+        print(f"Pazymys: {grade}. Teigiamas")
+    else:
+        print(f"Pazymys: {grade}. Neigiamas (iki teigiamo pritruko {5-grade})")
+
+
+print("--- 39 uzduotis ---")
+word_list = ["cia", "turime", "mano", "atsitiktiniu", "zodziu", "masyva"]
+letter_count = 0
+for word in word_list:
+    print(f"{word} ({len(word)} raides)")
+    letter_count += len(word)
+print(f"Is viso raidziu: {letter_count}")
+
+
+print("--- 40 uzduotis ---")
+numbers = [5, 8, 10, 9, 10, 9, 11, 7, 6, 12, 45, 16, 19]
+divisible_by_3 = [num for num in numbers if num%3==0]
+print(f"Pradinis skaiciu sarasas: {numbers}")
+print(f"Skaiciu, kurie dalijasi is 3, suma: {sum(divisible_by_3)}")
+print(f"Skaiciu, kurie dalijasi is 3, vidurkis: {sum(divisible_by_3)/len(divisible_by_3)}")
+
+
+print("--- 41 uzduotis ---")
+file_list = ["fb.exe", "my_text.txt", "duomenys.json", "run.py", "index.js", "public.html", "tekstas.txt", "adresai.json"]
+good_files = []
+for file in file_list:
+    if file.endswith(".json") or file.endswith(".txt"):
+        good_files.append(file)
+print(f"Txt ir JSON failai: {good_files}")
+
+
+print("\n--- 42 uzduotis ---")
+errors = [
+    (404, "Resursas nerastas"),
+    (401, "Nera prieigos teisiu"),
+    (500, "Serverio klaida")
+]
+for e in errors:
+    print(f"Klaidos kodas: {e[0]}. Aprasymas: {e[1]}")
+
+print("\n --- 43 uzduotis")
+inventory = [
+    ["duona", 15],
+    ["pienas", 45],
+    ["sviestas", 19],
+    ["grietine", 32],
+    ["sausainiai", 92],
+    ["saldainiai", 13],
+    ["sokoladas", 3]
+]
+need_to_stock_up = []
+for product in inventory:
+    days = product[1] // 5
+    text = f"Produktas - {product[0]} Likutis: {product[1]}. Prognozuojama, kad uzteks: {days} dienu"
+    print(text)
+    if days<=7:
+        need_to_stock_up.append(text)
+
+print("\nPrekės, kuriu atsargas reikia papildyti")
+[print(text) for text in need_to_stock_up]
+
+print("\n --- uzduotis 44 ---")
+word_list = ["cia", "turime", "mano", "atsitiktiniu", "zodziu", "masyva"]
+short_word_list = [word for word in word_list if len(word) < 5]
+print(f"Zodziu sarasas: {word_list}")
+print(f"Trumpu zodziu sarasas: {short_word_list}")
 
 
 
